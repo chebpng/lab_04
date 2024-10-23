@@ -18,6 +18,7 @@ type
     Edit2: TEdit;
     Edit3: TEdit;
     Label1: TLabel;
+    procedure Button2Click(Sender: TObject);
   private
 
   public
@@ -30,6 +31,13 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TForm1 }
+
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+  close;
+end;
 
 end.
 

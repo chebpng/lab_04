@@ -19,6 +19,7 @@ type
     Edit3: TEdit;
     Label1: TLabel;
     procedure Button2Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
 
   public
@@ -37,6 +38,11 @@ implementation
 procedure TForm1.Button2Click(Sender: TObject);
 begin
   close;
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+
 end;
 
 end.

@@ -37,6 +37,7 @@ object Form1: TForm1
     Width = 132
     Caption = 'Выход'
     TabOrder = 1
+    OnClick = Button2Click
   end
   object Edit1: TEdit
     Left = 616
