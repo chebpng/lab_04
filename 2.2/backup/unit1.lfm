@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 491
+  Left = 734
   Height = 486
-  Top = 191
+  Top = 215
   Width = 788
   Caption = 'Form1'
   ClientHeight = 486
@@ -47,7 +47,7 @@ object Form1: TForm1
     Top = 200
     Width = 136
     TabOrder = 2
-    Text = 'X min'
+    TextHint = 'X min'
   end
   object Edit2: TEdit
     Left = 616
@@ -55,7 +55,7 @@ object Form1: TForm1
     Top = 264
     Width = 136
     TabOrder = 3
-    Text = 'X max'
+    TextHint = 'X max'
   end
   object Edit3: TEdit
     Left = 616
@@ -63,6 +63,6 @@ object Form1: TForm1
     Top = 328
     Width = 136
     TabOrder = 4
-    Text = 'Кол-во точек'
+    TextHint = 'Кол-во точек'
   end
 end

@@ -5,7 +5,7 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls, Math;
 
 type
 
@@ -29,8 +29,8 @@ type
 
 var
   Form1: TForm1;
-  x, y, min, max, x_len:real;
-  z, dot:integer;
+  x, y, min, max, x_len, dot:real;
+  z, o, ix, jy:integer;
 
 implementation
 
@@ -45,20 +45,27 @@ end;
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
-
-      min := -10;
-      max := 10;
-      readln(dot);
+      dot:= strtofloat(Edit3.text) ;
+      min := strtofloat(Edit1.text);
+      max := strtofloat(Edit2.text);
       //(похуй пусть 11 точек будет)теперь не похуй
       x_len := (abs(min) + abs(max));
       x_len := (x_len/dot);
       x := min;
-      for z:= 1 to dot do
+      o := Trunc(dot);
+      ix := 30;//test------------------------------------
+      jy := 30;//test------------------------------------
+      for z:= 1 to o do
         begin
           y:= (x*x+2);
-          writeln(x, ' | ', y);
+          ix := Trunc(Round((((x-min)*(600-50))/(max-min))+50));
+          jy := Trunc(Round((((y-min)*(450-100))/(min-max))+450));
+          canvas.Ellipse(ix, jy, (ix+5), (jy+5));
+          //writeln(x, ' | ', y);
           x := x + x_len;
         end;
+
+
 
      Canvas.Pen.Color:=clFuchsia;
      //Canvas.Brush.Color:=clDefault;
@@ -67,7 +74,7 @@ begin
      Canvas.Line(50, 275, 600, 275);
      Canvas.Line(325, 100, 325, 450);
      Canvas.Brush.color:=clBlack;
-     Canvas.Ellipse(400, 400, 405, 405);
+     //Canvas.Ellipse(400, 400, 405, 405);
 
 end;
 
