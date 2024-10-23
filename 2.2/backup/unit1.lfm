@@ -1,9 +1,65 @@
 object Form1: TForm1
-  Left = 390
-  Height = 240
-  Top = 147
-  Width = 320
+  Left = 2429
+  Height = 486
+  Top = 19
+  Width = 788
   Caption = 'Form1'
+  ClientHeight = 486
+  ClientWidth = 788
   DesignTimePPI = 120
   LCLVersion = '3.4.0.0'
+  object Label1: TLabel
+    Left = 112
+    Height = 27
+    Top = 32
+    Width = 515
+    Caption = 'График функции sin(x+1)'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -27
+    Font.Name = 'SimSun'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+  end
+  object Button1: TButton
+    Left = 616
+    Height = 65
+    Top = 103
+    Width = 132
+    Caption = 'Рисовать'
+    TabOrder = 0
+  end
+  object Button2: TButton
+    Left = 616
+    Height = 41
+    Top = 400
+    Width = 132
+    Caption = 'Выход'
+    TabOrder = 1
+  end
+  object Edit1: TEdit
+    Left = 616
+    Height = 28
+    Top = 200
+    Width = 136
+    TabOrder = 2
+    Text = 'X min'
+  end
+  object Edit2: TEdit
+    Left = 616
+    Height = 28
+    Top = 264
+    Width = 136
+    TabOrder = 3
+    Text = 'X max'
+  end
+  object Edit3: TEdit
+    Left = 616
+    Height = 28
+    Top = 328
+    Width = 136
+    TabOrder = 4
+    Text = 'Кол-во точек'
+  end
 end

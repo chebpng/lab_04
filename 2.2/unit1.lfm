@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 390
+  Left = 2429
   Height = 486
-  Top = 147
+  Top = 19
   Width = 788
   Caption = 'Form1'
   ClientHeight = 486
@@ -37,6 +37,7 @@ object Form1: TForm1
     Width = 132
     Caption = 'Выход'
     TabOrder = 1
+    OnClick = Button2Click
   end
   object Edit1: TEdit
     Left = 616
