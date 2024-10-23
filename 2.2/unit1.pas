@@ -45,9 +45,9 @@ end;
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
-
-      min := -10;
-      max := 10;
+      dot:=strtofloat(Edit3.text) ;
+      min := strtofloat(Edit1.text);
+      max := strtofloat(Edit2.text);
       readln(dot);
       //(похуй пусть 11 точек будет)теперь не похуй
       x_len := (abs(min) + abs(max));
@@ -56,6 +56,7 @@ begin
       for z:= 1 to dot do
         begin
           y:= (x*x+2);
+
           writeln(x, ' | ', y);
           x := x + x_len;
         end;

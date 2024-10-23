@@ -20,6 +20,6 @@ for z:= 1 to dot do
   end;
 end.
 
-ix=(((x-Xbeg)*(Iend-Ibeg))/(Xend-Xbeg))+Ibeg
+ix := floattoint(Round((((x-Xbeg)*(Iend-Ibeg))/(Xend-Xbeg))+Ibeg));
 
-jy=(((y-Ymin)*(Jend-Jbeg))/(Ymin-Ymax))+Jend
+jy := floattoint(Round((((y-Ymin)*(Jend-Jbeg))/(Ymin-Ymax))+Jend));
