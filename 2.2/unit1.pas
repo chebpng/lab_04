@@ -29,6 +29,8 @@ type
 
 var
   Form1: TForm1;
+  x, y, min, max, x_len:real;
+  z, dot:integer;
 
 implementation
 
@@ -43,9 +45,30 @@ end;
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
+
+      min := -10;
+      max := 10;
+      readln(dot);
+      //(похуй пусть 11 точек будет)теперь не похуй
+      x_len := (abs(min) + abs(max));
+      x_len := (x_len/dot);
+      x := min;
+      for z:= 1 to dot do
+        begin
+          y:= (x*x+2);
+          writeln(x, ' | ', y);
+          x := x + x_len;
+        end;
+
      Canvas.Pen.Color:=clFuchsia;
      //Canvas.Brush.Color:=clDefault;
      Canvas.Rectangle(50, 100, 600, 450);
+     Canvas.Pen.Color:=clBlack;
+     Canvas.Line(50, 275, 600, 275);
+     Canvas.Line(325, 100, 325, 450);
+     Canvas.Brush.color:=clBlack;
+     Canvas.Ellipse(400, 400, 405, 405);
+
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
