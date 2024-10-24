@@ -5,7 +5,7 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls, Math;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls, Math, Windows;
 
 type
 
@@ -31,6 +31,7 @@ var
   Form1: TForm1;
   x, y, min, max, x_len, dot:real;
   z, o, ix, jy:integer;
+  f:text;
 
 implementation
 
@@ -45,6 +46,8 @@ end;
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
+     //AssignFile(f, 'output.txt');
+     //Rewrite(f);
      Canvas.Pen.Color:=clFuchsia;
      //Canvas.Brush.Color:=clDefault;
      Canvas.Rectangle(50, 100, 600, 600);
@@ -68,18 +71,19 @@ begin
       jy := 30;//test------------------------------------
       for z:= 1 to o do
         begin
-          y:= (x*x+1);
+          //y:= (x*x);
+          y:= cos(x);
           ix := Trunc(Round((((x-min)*(600-50))/(max-min))+50));
           jy := Trunc(Round((((y-min)*(600-100))/(min-max))+600));
-          if (50>=jy) or (jy>=600) then
-             continue
-          else
+          if (100<=jy) or (jy>=600) then
           begin
           canvas.Ellipse(ix, jy, (ix+5), (jy+5));
+          //WriteLn(f, 'x = ', ix, ' y = ', jy);
           //writeln(x, ' | ', y);
           end;
           x := x + x_len;
         end;
+        //CloseFile(f);
 
 
 
