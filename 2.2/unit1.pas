@@ -75,7 +75,7 @@ begin
       canvas.pen.color:=clFuchsia        ;
       for z:= 1 to o do
         begin
-          y:= (sin(x+2))        ;
+          y:= (sqrt(cos((2*x))));
           ix := Trunc(Round((((x-min)*(600-50))/(max-min))+50));
           jy := Trunc(Round((((y-min)*(600-100))/(min-max))+600));
           if (100<=jy) or (jy>=600) then
