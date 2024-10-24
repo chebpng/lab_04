@@ -2271,7 +2271,7 @@ object Form1: TForm1
     Height = 27
     Top = 32
     Width = 515
-    Caption = 'График функции sin(x+1)'
+    Caption = 'График функции sin(x+2)'
     Font.CharSet = ANSI_CHARSET
     Font.Height = -27
     Font.Name = 'SimSun'
@@ -2283,7 +2283,7 @@ object Form1: TForm1
   object Button1: TButton
     Left = 616
     Height = 65
-    Top = 103
+    Top = 456
     Width = 132
     Caption = 'Рисовать'
     TabOrder = 0
@@ -2292,7 +2292,7 @@ object Form1: TForm1
   object Button2: TButton
     Left = 616
     Height = 41
-    Top = 400
+    Top = 560
     Width = 132
     Caption = 'Выход'
     TabOrder = 1
@@ -2333,5 +2333,25 @@ object Form1: TForm1
     )
     TabOrder = 4
     TextHint = 'Кол-во точек'
+  end
+  object ComboBox2: TComboBox
+    Left = 616
+    Height = 28
+    Top = 392
+    Width = 136
+    ItemHeight = 20
+    Items.Strings = (
+      '2'
+      '3'
+      '4'
+      '5'
+      '6'
+      '7'
+      '8'
+      '9'
+      '10'
+    )
+    TabOrder = 5
+    TextHint = 'Размер точек'
   end
 end
