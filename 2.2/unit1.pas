@@ -14,9 +14,9 @@ type
   TForm1 = class(TForm)
     Button1: TButton;
     Button2: TButton;
+    ComboBox1: TComboBox;
     Edit1: TEdit;
     Edit2: TEdit;
-    Edit3: TEdit;
     Image1: TImage;
     Label1: TLabel;
     procedure Button1Click(Sender: TObject);
@@ -60,7 +60,7 @@ begin
 
 
 
-      dot:= strtofloat(Edit3.text) ;
+      dot:= strtofloat(ComboBox1.Text) ;
       min := strtofloat(Edit1.text);
       max := strtofloat(Edit2.text);
       //(похуй пусть 11 точек будет)теперь не похуй

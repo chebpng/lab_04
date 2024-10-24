@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 951
+  Left = 442
   Height = 677
-  Top = 254
+  Top = 210
   Width = 788
   Caption = 'Form1'
   ClientHeight = 677
@@ -10,10 +10,10 @@ object Form1: TForm1
   OnCreate = FormCreate
   LCLVersion = '3.4.0.0'
   object Image1: TImage
-    Left = 48
+    Left = 56
     Height = 545
     Top = 176
-    Width = 524
+    Width = 516
     Picture.Data = {
       0A544A706567496D616765DE180100FFD8FFE000104A46494600010101004800
       480000FFDB00430006040506050406060506070706080A100A0A09090A140E0F
@@ -2320,6 +2320,26 @@ object Form1: TForm1
     Top = 328
     Width = 136
     TabOrder = 4
+    TextHint = 'Кол-во точек'
+  end
+  object ComboBox1: TComboBox
+    Left = 616
+    Height = 28
+    Top = 472
+    Width = 136
+    ItemHeight = 20
+    Items.Strings = (
+      '1'
+      '10'
+      '100'
+      '1000'
+      '10000'
+      '100000'
+      '1000000'
+      '10000000'
+      '100000000'
+    )
+    TabOrder = 5
     TextHint = 'Кол-во точек'
   end
 end

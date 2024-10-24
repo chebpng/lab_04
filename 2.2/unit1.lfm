@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 951
+  Left = 442
   Height = 677
-  Top = 254
+  Top = 210
   Width = 788
   Caption = 'Form1'
   ClientHeight = 677
@@ -2314,11 +2314,23 @@ object Form1: TForm1
     TabOrder = 3
     TextHint = 'X max'
   end
-  object Edit3: TEdit
+  object ComboBox1: TComboBox
     Left = 616
     Height = 28
     Top = 328
     Width = 136
+    ItemHeight = 20
+    Items.Strings = (
+      '1'
+      '10'
+      '100'
+      '1000'
+      '10000'
+      '100000'
+      '1000000'
+      '10000000'
+      '100000000'
+    )
     TabOrder = 4
     TextHint = 'Кол-во точек'
   end
