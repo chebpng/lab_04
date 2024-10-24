@@ -45,6 +45,17 @@ end;
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
+     Canvas.Pen.Color:=clFuchsia;
+     //Canvas.Brush.Color:=clDefault;
+     Canvas.Rectangle(50, 100, 600, 600);
+     Canvas.Pen.Color:=clBlack;
+     Canvas.Line(50, 350, 600, 350);
+     Canvas.Line(325, 100, 325, 600);
+     Canvas.Brush.color:=clBlack;
+     //Canvas.Ellipse(400, 400, 405, 405);
+
+
+
       dot:= strtofloat(Edit3.text) ;
       min := strtofloat(Edit1.text);
       max := strtofloat(Edit2.text);
@@ -57,24 +68,22 @@ begin
       jy := 30;//test------------------------------------
       for z:= 1 to o do
         begin
-          y:= (x*x+2);
+          y:= (x*x+1);
           ix := Trunc(Round((((x-min)*(600-50))/(max-min))+50));
-          jy := Trunc(Round((((y-min)*(450-100))/(min-max))+450));
+          jy := Trunc(Round((((y-min)*(600-100))/(min-max))+600));
+          if (50>=jy) or (jy>=600) then
+             continue
+          else
+          begin
           canvas.Ellipse(ix, jy, (ix+5), (jy+5));
           //writeln(x, ' | ', y);
+          end;
           x := x + x_len;
         end;
 
 
 
-     Canvas.Pen.Color:=clFuchsia;
-     //Canvas.Brush.Color:=clDefault;
-     Canvas.Rectangle(50, 100, 600, 450);
-     Canvas.Pen.Color:=clBlack;
-     Canvas.Line(50, 275, 600, 275);
-     Canvas.Line(325, 100, 325, 450);
-     Canvas.Brush.color:=clBlack;
-     //Canvas.Ellipse(400, 400, 405, 405);
+
 
 end;
 
