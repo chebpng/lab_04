@@ -45,6 +45,8 @@ procedure TForm1.Button1Click(Sender: TObject);
 begin
   other := 0;
   Chart1BarSeries1.Clear;
+  Canvas.Brush.Color := clDefault;
+  Canvas.FillRect(0, 500, 1000, 1000);
   for z := 0 to strtoint(ComboBox1.Text) do
   begin
        Chart1BarSeries1.Add(LRate[z], lang[z], LColor[z]);
@@ -52,10 +54,12 @@ begin
        Canvas.Brush.Color:=clForm;
        Canvas.Font.Color:=LColor[z];
        Canvas.Font.Size:=10;
-       Canvas.TextOut(60, 150, lang[z]);
+       Canvas.TextOut(800, 150+z*30, lang[z]);
   end;
        other:= (100-other);
        Chart1BarSeries1.Add(other, 'Other', $00408080);
+       Canvas.Font.Color:=$00408080;
+       Canvas.TextOut(800, 150+(z+1)*30, 'Others');
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);

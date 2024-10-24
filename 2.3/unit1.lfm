@@ -1,10 +1,10 @@
 object Form1: TForm1
   Left = 319
-  Height = 590
+  Height = 652
   Top = 163
   Width = 979
   Caption = 'Form1'
-  ClientHeight = 590
+  ClientHeight = 652
   ClientWidth = 979
   DesignTimePPI = 120
   LCLVersion = '3.4.0.0'
@@ -20,7 +20,7 @@ object Form1: TForm1
   object Button2: TButton
     Left = 773
     Height = 62
-    Top = 488
+    Top = 552
     Width = 166
     Caption = 'Выход'
     TabOrder = 1
@@ -56,7 +56,7 @@ object Form1: TForm1
   end
   object Chart1: TChart
     Left = 34
-    Height = 428
+    Height = 508
     Top = 106
     Width = 694
     AxisList = <    
