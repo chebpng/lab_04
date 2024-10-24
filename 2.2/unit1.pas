@@ -17,6 +17,7 @@ type
     Edit1: TEdit;
     Edit2: TEdit;
     Edit3: TEdit;
+    Image1: TImage;
     Label1: TLabel;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
@@ -67,12 +68,11 @@ begin
       x_len := (x_len/dot);
       x := min;
       o := Trunc(dot);
-      ix := 30;//test------------------------------------
-      jy := 30;//test------------------------------------
+      canvas.brush.color:=clFuchsia     ;
+      canvas.pen.color:=clFuchsia        ;
       for z:= 1 to o do
         begin
-          //y:= (x*x);
-          y:= cos(x);
+          y:= (x*x+2)        ;
           ix := Trunc(Round((((x-min)*(600-50))/(max-min))+50));
           jy := Trunc(Round((((y-min)*(600-100))/(min-max))+600));
           if (100<=jy) or (jy>=600) then
