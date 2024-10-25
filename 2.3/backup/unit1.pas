@@ -46,7 +46,7 @@ begin
   other := 0;
   Chart1BarSeries1.Clear;
   Canvas.Brush.Color := clDefault;
-  Canvas.FillRect(0, 0, 1000, 1000);
+  Canvas.FillRect(0, 500, 1000, 1000);
   for z := 0 to strtoint(ComboBox1.Text) do
   begin
        Chart1BarSeries1.Add(LRate[z], lang[z], LColor[z]);
