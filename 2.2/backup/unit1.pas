@@ -16,7 +16,6 @@ type
     Label1: TLabel;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
   private
   public
   end;
@@ -34,7 +33,7 @@ begin
 end;
 
 //конвертация между системами кординат
-function convert;
+procedure convert;
 begin
 ix := Trunc(Round((((x+10)*(600-50))/(10+10))+50));
 jy := Trunc(Round((((y-10)*(600-100))/(10+10))+600));
@@ -63,11 +62,14 @@ begin
         begin
           y:= sin(x+2);
           convert();
+       //   if (x > Trunc(min)) or (x < Trunc(max))then
+          begin
           if (100<=jy) or (jy>=600) then
           begin
           canvas.Ellipse(ix, jy, (ix+DSize), (jy+DSize));
           end;
           x := x + x_len;
+         end;
         end;
          canvas.pen.color:=clBlack;
          canvas.brush.color:=clBlack;
@@ -85,7 +87,5 @@ begin
       end;
 
 end;
-procedure TForm1.FormCreate(Sender: TObject);
-begin
-end;
+
 end.
