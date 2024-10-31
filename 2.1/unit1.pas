@@ -41,17 +41,17 @@ begin
 
   Canvas.Pen.Color:=clGreen;
   Canvas.Pen.Width:=3;
-  Canvas.Brush.Color:=clRed;
+  Canvas.Brush.Color:=clGreen;
   Canvas.EllipseC(75,75,25,25);
 
   Canvas.Pen.Color:=clRed;
   Canvas.Brush.Color:=clGreen;
-  Canvas.Brush.Style:=bsCross;
+  //Canvas.Brush.Style:=bsCross;
   Canvas.Rectangle(110, 50, 210, 100);
 
   Canvas.Pen.Color:=clBlack;
   Canvas.Pen.Width:=10;
-  Canvas.Line(10, 120, Width - 10, 120);
+  Canvas.Line(10, 240, Width - 10, 240);
 
   Canvas.Brush.Color:=clForm;
   Canvas.Font.Color:=clBlue;

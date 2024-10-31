@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 797
+  Left = 549
   Height = 652
-  Top = 239
+  Top = 266
   Width = 979
   Caption = 'Form1'
   ClientHeight = 652
@@ -75,6 +75,7 @@ object Form1: TForm1
     Title.Text.Strings = (
       'TAChart'
     )
+    Enabled = False
     object Chart1BarSeries1: TBarSeries
       BarBrush.Color = clRed
     end
