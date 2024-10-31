@@ -32,6 +32,14 @@ procedure TForm1.Button2Click(Sender: TObject);
 begin
   close;
 end;
+
+//конвертация между системами кординат
+procedure convert;
+begin
+ix := Trunc(Round((((x+10)*(600-50))/(10+10))+50));
+jy := Trunc(Round((((y-10)*(600-100))/(10+10))+600));
+end;
+
 procedure TForm1.Button1Click(Sender: TObject);
 begin
      DSize := strtoint(ComboBox2.Text);
@@ -53,9 +61,8 @@ begin
       canvas.pen.color:=clFuchsia        ;
       for z:= 1 to o do
         begin
-          y:= x;
-          ix := Trunc(Round((((x-min)*(600-50))/(max-min))+50));
-          jy := Trunc(Round((((y-min)*(600-100))/(min-max))+600));
+          y:= sin(x+2);
+          convert();
           if (100<=jy) or (jy>=600) then
           begin
           canvas.Ellipse(ix, jy, (ix+DSize), (jy+DSize));
@@ -64,9 +71,9 @@ begin
         end;
          canvas.pen.color:=clBlack;
          canvas.brush.color:=clBlack;
-      for i:= 1 to 10 do
+      for i:= -10 to 10 do
         begin
-          if i < strtofloat(Edit2.text)then
+          if i <> 0 then
         begin
           ix := Trunc(Round((((i-min)*(600-50))/(max-min))+50));
           jy := Trunc(Round((((0-min)*(600-100))/(min-max))+600));
